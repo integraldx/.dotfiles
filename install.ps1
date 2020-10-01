@@ -3,7 +3,7 @@ if (-Not ((Get-ExecutionPolicy -Scope CurrentUser).ToString().CompareTo("RemoteS
 {
     Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 }
-else 
+else
 {
     Write-Output "ExecutionPolicy was already Remotesigned"
 }
@@ -13,7 +13,7 @@ if (-Not (Get-Command "scoop" -ErrorAction SilentlyContinue))
 {
     Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 }
-else 
+else
 {
     Write-Output "Scoop was already installed"
 }
@@ -27,4 +27,5 @@ if (-Not (Test-Path $profileDirectoryPath))
 }
 
 New-Item -ItemType SymbolicLink -Path $profile -Target (Join-Path (Get-Location) "profile.ps1") -Force
+New-Item -ItemType SymbolicLink -Path (Join-Path $profileDirectoryPath "git-alias.ps1") -Target (Join-Path (Get-Location) "git-alias.ps1") -Force
 Write-Output "Powershell profile linked with profile path"

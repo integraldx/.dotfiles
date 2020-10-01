@@ -1,14 +1,8 @@
+
 Import-Module oh-my-posh
 
 Set-Theme agnoster
 
-function GitAdd {
-    param (
-        $OptionalParameters
-    )
-    git add $OptionalParameters
-}
+Set-Alias e explorer -Force
 
-Set-Alias g git
-Set-Alias e explorer
-Set-Alias ga GitAdd
+Invoke-Expression -Command (Get-Content -Path (Join-Path $PSScriptRoot .\git-alias.ps1) | Out-String)
