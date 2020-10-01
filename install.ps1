@@ -26,5 +26,5 @@ if (-Not (Test-Path $profileDirectoryPath))
     New-Item $profileDirectoryPath -ItemType Directory | Out-Null
 }
 
-Copy-Item -Path (Join-Path (Get-Location) "profile.ps1") -Destination $profile
-Write-Output "Powershell profile copied into profile path"
+New-Item -ItemType SymbolicLink -Path $profile -Target (Join-Path (Get-Location) "profile.ps1") -Force
+Write-Output "Powershell profile linked with profile path"
