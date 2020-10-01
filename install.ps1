@@ -18,7 +18,7 @@ else
     Write-Output "Scoop was already installed"
 }
 
-# Copy profile.ps1 into profile location
+# Link profile.ps1 into profile location
 $profileDirectoryPath = Split-Path $profile -Parent
 
 if (-Not (Test-Path $profileDirectoryPath))
