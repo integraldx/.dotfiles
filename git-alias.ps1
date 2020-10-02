@@ -26,10 +26,7 @@ function GitBisectGood($params) { git bisect good $params}
 function GitBisectReset($params) { git bisect reset $params}
 function GitBisectStart($params) { git bisect start $params}
 
-function GitCommit {
-    param ( [Parameter(ValueFromRemainingArguments)] $params )
-    git commit $params
-}
+function GitCommit([Parameter(ValueFromRemainingArguments)] $params) { git commit $params }
 function GitStatus($params) { git status $params }
 
 Set-Alias g git -Force
