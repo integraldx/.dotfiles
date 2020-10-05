@@ -177,3 +177,35 @@ function gstl { git stash list @args }
 function gstp { git stash pop @args }
 function gsts { git stash show --text @args }
 function gstu { git stash --include-untracked @args }
+function gstall { git stash --all @args }
+function gsu { git stash --include-untracked @args }
+function gsw { git switch @args }
+function gswc { git switch -c @args }
+
+function gts { git tag -s @args }
+function gtv { git tag | Sort-Object -V }
+function gtl { git tag --sort=-v:refname -n -l "$($args[0])*" }
+
+function gunignore { git update-index --no-assume-unchanged @args }
+function gunwip { git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1 }
+function gup { git pull --rebase @args }
+function gupv { git pull --rebase -v @args }
+function gupa { git pull --rebase --autostash @args }
+function gupav { git pull --rebase --autostash -v @args }
+function glum { git pull upstream (GitMainBranch) @args }
+
+function gwch { git whatchanged -p --abbrev-commit --pretty=medium @args }
+function gwip { git add -A; git rm (git ls-files --deleted | Out-String) 2>&1 Out-Null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"}
+
+function gam { git am @args }
+function gamc { git am --continue @args }
+function gams { git am --skip @args }
+function gama { git am --abort @args }
+function gamscp { git am --show-current-patch @args }
+
+function grename($oldbranch, $newbranch) {
+    git branch -m $oldbranch $newbranch
+    if (git push origin :"$($oldbranch)") {
+        git push --set-upstream origin "$($newbranch)"
+    }
+}
