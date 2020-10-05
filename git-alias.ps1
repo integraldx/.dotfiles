@@ -18,6 +18,10 @@ if (Test-Path alias:gl) {
     Remove-Alias gl -Force
 }
 
+if (Test-Path alias:gcm) {
+    Remove-Alias gcm -Force
+}
+
 # Git aliases
 function GitMainBranch {
     if (git branch --list main) {
