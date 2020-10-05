@@ -10,6 +10,10 @@ if (Test-Path alias:gp) {
     Remove-Alias gp -Force
 }
 
+if (Test-Path alias:gm) {
+    Remove-Alias gm -Force
+}
+
 # Git aliases
 function GitMainBranch {
     if (git branch --list main) {
