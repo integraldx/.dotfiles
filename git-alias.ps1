@@ -221,3 +221,6 @@ function grename($oldbranch, $newbranch) {
         git push --set-upstream origin "$($newbranch)"
     }
 }
+
+# git-flow aliases
+function gfl { git flow @args }
