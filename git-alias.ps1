@@ -80,7 +80,18 @@ function gpristine { git reset --hard ; git clean -dffx }
 function gcm { git checkout (GitMainBranch) @args }
 function gcd { git checkout develop @args }
 function gcmsg { git commit -m @args }
-function gco { git checkout @args }
+function gco {
+    [CmdletBinding()]
+    param (
+        $TargetBranch
+    )
+    git checkout $TargetBranch @args
+}
+$BranchList = {
+    param($commandName,$parameterName,$stringMatch)
+    (git for-each-ref --format='%(refname:short)' refs/ | Out-String).Split([Environment]::NewLine) | Select-String -Pattern $stringMatch
+}
+Register-ArgumentCompleter -CommandName gco -ParameterName TargetBranch -ScriptBlock $BranchList
 function gcount { git shortlog -sn @args }
 function gcp { git cherry-pick @args }
 function gcpa { git cherry-pick --abort @args }
