@@ -33,3 +33,7 @@ Write-Output "Powershell profile linked with profile path"
 # Link .gitignore
 New-Item -ItemType SymbolicLink -Path (Join-Path ($HOME) ".gitconfig") -Target (Join-Path (Get-Location) ".gitconfig") -Force
 Write-Output ".gitconfig linked in home path"
+
+# Link .ideavimrc
+New-Item -ItemType SymbolicLink -Path (Join-Path ($HOME) ".ideavimrc") -Target (Join-Path (Get-Location) ".ideavimrc") -Force
+Write-Output ".ideavimrc linked in home path"
