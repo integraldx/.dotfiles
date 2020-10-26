@@ -1,6 +1,6 @@
 Import-Module oh-my-posh
 
-Set-Theme agnoster
+Set-Theme Sorin
 
 Set-Alias e explorer -Force
 
