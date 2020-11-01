@@ -176,7 +176,7 @@ function grmc { git rm --cached @args }
 function grmv { gir remote rename @args }
 function grrm { git remote remove @args }
 function grs { git restore @args }
-function grsassets { git restore **/*.spriteatlas **/*.prefab @args }
+function grsassets { git restore **/*.spriteatlas **/*.prefab **/*.asset @args }
 function grset { git remote set-url @args }
 function grss { git restore --source @args }
 function grt { Set-Location "$((git rev-parse --show-toplevel || Write-Output .))"}
