@@ -22,6 +22,10 @@ if (Test-Path alias:gcm) {
     Remove-Alias gcm -Force
 }
 
+if (Test-Path alias:gcb) {
+    Remove-Alias gcb -Force
+}
+
 # Git aliases
 function GitMainBranch {
     if (git branch --list main) {
