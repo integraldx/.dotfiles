@@ -1,4 +1,9 @@
 set easymotion
 set surround
+set incsearch
+set hlsearch
+set showmatch
 
 let mapleader = "\"
+
+nmap g] :action GotoImplementation<CR>
