@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
-BASEDIR="$(dirname "$0")"
-ln -sf "$BASEDIR/.ideavimrc" ~/.ideavimrc
+BASEDIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+ln -sf "$BASEDIR/.ideavimrc" $HOME/.ideavimrc
