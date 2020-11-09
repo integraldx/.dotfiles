@@ -6,4 +6,4 @@ set showmatch
 
 let mapleader = "\"
 
-nmap g] :action GotoImplementation<CR>
+nmap gi :action GotoImplementation<CR>
