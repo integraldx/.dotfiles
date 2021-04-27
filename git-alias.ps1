@@ -54,7 +54,7 @@ function gba { git branch -a @args }
 function gbd { git branch -d @args }
 function gbda {
     git branch --no-color --merged |
-    grep -vE "^(\+|\*|\s*($(GitMainBranch)|development|develop|devel|dev)\s*$)" |
+    grep -vE "(\+|\*|\s*($(GitMainBranch)|development|develop|devel|dev)\s*$)" |
     xargs -n 1 git branch -d
 }
 function gbD { git branch -D @args }
