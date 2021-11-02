@@ -1,4 +1,8 @@
-Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh3)/themes/robbyrussel.omp.json")
+try {
+  oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\robbyrussel.omp.json | Invoke-Expression 2> out-null
+}
+catch {
+}
 
 Set-Alias vim nvim
 Set-Alias e explorer -Force
