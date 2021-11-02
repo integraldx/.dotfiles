@@ -240,3 +240,7 @@ function grename($oldbranch, $newbranch) {
 
 # git-flow aliases
 function gfl { git flow @args }
+function gflfs { git flow feature start @args }
+function gflff { git flow feature finish @args }
+function gflbs { git flow bugfix start @args }
+function gflbf { git flow bugfix finish @args }
