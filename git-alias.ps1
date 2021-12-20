@@ -244,3 +244,7 @@ function gflfs { git flow feature start @args }
 function gflff { git flow feature finish @args }
 function gflbs { git flow bugfix start @args }
 function gflbf { git flow bugfix finish @args }
+
+# personal custom
+function gchash { git rev-parse --short HEAD | Set-Clipboard }
+function gswd { git switch --detach @args }
