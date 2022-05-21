@@ -8,16 +8,6 @@ else
     Write-Output "ExecutionPolicy was already Remotesigned"
 }
 
-# Install Scoop
-if (-Not (Get-Command "scoop" -ErrorAction SilentlyContinue))
-{
-    Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
-}
-else
-{
-    Write-Output "Scoop was already installed"
-}
-
 # Link profile.ps1 into profile location
 $profileDirectoryPath = Split-Path $profile -Parent
 
