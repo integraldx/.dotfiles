@@ -1,6 +1,6 @@
 [core]
 	editor = nvim
-
+	fsmonitor = true
 [merge]
 	conflictstyle = diff3
 
