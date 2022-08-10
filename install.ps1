@@ -20,7 +20,7 @@ New-Item -ItemType SymbolicLink -Path $profile -Target (Join-Path (Get-Location)
 New-Item -ItemType SymbolicLink -Path (Join-Path $profileDirectoryPath "git-alias.ps1") -Target (Join-Path (Get-Location) "git-alias.ps1") -Force
 Write-Output "Powershell profile linked with profile path"
 
-# Link .gitignore
+# Link .gitconfig
 New-Item -ItemType SymbolicLink -Path (Join-Path ($HOME) ".gitconfig") -Target (Join-Path (Get-Location) ".gitconfig") -Force
 Write-Output ".gitconfig linked in home path"
 
