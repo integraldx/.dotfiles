@@ -12,6 +12,9 @@ let leader = "\"
 
 nmap gi :action GotoImplementation<CR>
 
+nmap zo :action ExpandRegion<CR>
+nmap zc :action CollapseRegion<CR>
+
 nmap <leader>[ :action Back<CR>
 nmap <leader>] :action Forward<CR>
 
