@@ -18,7 +18,7 @@ nmap zc :action CollapseRegion<CR>
 nmap <leader>[ :action Back<CR>
 nmap <leader>] :action Forward<CR>
 
-nmap <leader>ws :action SplitHorizontally<CR
+nmap <leader>ws :action SplitHorizontally<CR>
 nmap <leader>wv :action SplitVertically<CR>
 
 nmap <leader>rI :action OptimizeImports<CR>
