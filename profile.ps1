@@ -5,3 +5,9 @@ Set-Alias vim nvim
 Set-Alias e explorer -Force
 
 . $PSScriptRoot/git-alias.ps1
+
+Set-PSReadLineOption -Colors @{ 
+  "Parameter"="DarkMagenta"
+  "Operator"="DarkMagenta" 
+}
+
