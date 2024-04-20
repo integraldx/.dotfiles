@@ -13,3 +13,15 @@
 
 [init]
 	defaultBranch = main
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgSign = true
+
+[gpg]
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+
+[include]
+	path = "~/.dotfiles/local/.gitconfig"
