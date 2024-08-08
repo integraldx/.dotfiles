@@ -18,6 +18,7 @@ if (-Not (Test-Path $profileDirectoryPath))
 
 New-Item -ItemType SymbolicLink -Path $profile -Target (Join-Path (Get-Location) "profile.ps1") -Force
 New-Item -ItemType SymbolicLink -Path (Join-Path $profileDirectoryPath "git-alias.ps1") -Target (Join-Path (Get-Location) "git-alias.ps1") -Force
+New-Item -ItemType SymbolicLink -Path (Join-Path $profileDirectoryPath "alias.ps1") -Target (Join-Path (Get-Location) "alias.ps1") -Force
 Write-Output "Powershell profile linked with profile path"
 
 # Link .gitconfig

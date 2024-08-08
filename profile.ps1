@@ -1,12 +1,18 @@
+# oh-my-posh initialization
 oh-my-posh --init --shell pwsh --config $HOME/.dotfiles/local/theme.omp.json | Invoke-Expression
 
-Set-Alias vim nvim
-Set-Alias e explorer -Force
+# zoxide initialization
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
+# importing common aliases
+. $PSScriptRoot/alias.ps1
+
+# importing git aliases
 . $PSScriptRoot/git-alias.ps1
 
-Set-PSReadLineOption -Colors @{ 
+# override color settings for better readablity
+Set-PSReadLineOption -Colors @{
   "Parameter"="DarkMagenta"
-  "Operator"="DarkMagenta" 
+  "Operator"="DarkMagenta"
 }
 
