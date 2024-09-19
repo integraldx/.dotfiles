@@ -8,7 +8,7 @@ set noerrorbells
 
 set clipboard+=unnamed
 
-let leader = "\"
+let leader = '\'
 
 nmap gi :action GotoImplementation<CR>
 
