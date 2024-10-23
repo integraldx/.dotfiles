@@ -2,6 +2,7 @@
 	editor = nvim
 	fsmonitor = true
 	autocrlf = input
+	sshCommand = C:/\"Program Files\"/OpenSSH/ssh.exe
 [merge]
 	conflictstyle = diff3
 
@@ -25,8 +26,12 @@
 
 [include]
 	path = "~/.dotfiles/local/.gitconfig"
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[ssh]
+	variant = ssh
