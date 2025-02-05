@@ -207,7 +207,26 @@ function gsts { git stash show --text @args }
 function gstu { git stash --include-untracked @args }
 function gstall { git stash --all @args }
 function gsu { git stash --include-untracked @args }
-function gsw { git switch @args }
+
+function gsw
+{
+    param(
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [ArgumentCompleter({
+            param($pCmd, $pParam, $pWord, $pAst, $pFakes)
+
+            $branchList = (git branch --format='%(refname:short)')
+
+            if ([string]::IsNullOrWhiteSpace($pWord)) {
+                return $branchList
+            }
+
+            $branchList | Select-String "$pWord"
+        })]
+        $passargs)
+
+    git switch $passargs
+}
 function gswc { git switch -c @args }
 
 function gts { git tag -s @args }
