@@ -2,7 +2,6 @@
 	editor = nvim
 	fsmonitor = true
 	autocrlf = input
-	sshCommand = C:/\"Program Files\"/OpenSSH/ssh.exe
 [merge]
 	conflictstyle = diff3
 
