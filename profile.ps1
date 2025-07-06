@@ -1,5 +1,5 @@
 # oh-my-posh initialization
-oh-my-posh --init --shell pwsh --config $HOME/.dotfiles/local/theme.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config $HOME/.dotfiles/theme.omp.json | Invoke-Expression
 
 # zoxide initialization
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
