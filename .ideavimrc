@@ -22,3 +22,5 @@ nmap <leader>ws :action SplitHorizontally<CR>
 nmap <leader>wv :action SplitVertically<CR>
 
 nmap <leader>rI :action OptimizeImports<CR>
+
+nmap <leader>rr :action RefactoringMenu<CR>
