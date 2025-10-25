@@ -24,3 +24,5 @@ nmap <leader>wv :action SplitVertically<CR>
 nmap <leader>rI :action OptimizeImports<CR>
 
 nmap <leader>rr :action RefactoringMenu<CR>
+
+:set keep-english-in-normal-and-restore-in-insert
