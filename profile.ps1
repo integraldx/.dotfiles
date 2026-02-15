@@ -15,8 +15,3 @@ Set-PSReadLineOption -Colors @{
   "Parameter"="DarkMagenta"
   "Operator"="DarkMagenta"
 }
-
-function claude() {
-    wsl claude
-}
-
